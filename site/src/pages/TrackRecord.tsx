@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import TrackRecordProjects from '../components/sections/TrackRecordProjects';
 import TrackRecordSummary from '../components/sections/TrackRecordSummary';
+import TrackRecordList from '../components/sections/TrackRecordList';
 
 const TrackRecord: React.FC = () => {
     useEffect(() => {
@@ -26,6 +27,7 @@ const TrackRecord: React.FC = () => {
 
             <TrackRecordProjects />
             <TrackRecordSummary />
+            <TrackRecordList />
         </div>
     );
 };

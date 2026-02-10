@@ -2,40 +2,40 @@ import React from 'react';
 
 const projects = [
     {
-        title: 'G20 정상회의 공식 의전',
-        desc: '주요 20개국 정상 및 수행원 대상 의전 차량 운영 총괄',
-        tags: ['Global Event', 'VVIP Protocol'],
-        year: '202X'
-    },
-    {
-        title: 'APEC CEO Summit 수송',
-        desc: '아시아태평양 경제협력체 CEO 서밋 참가자 수송 솔루션 제공',
-        tags: ['MICE', 'Mass Transit'],
+        title: 'APEC 2025 KOREA 정상회의',
+        desc: '금호고속 공동수주, VMS 시스템 도입으로 완벽한 의전 수송 수행',
+        tags: ['Summit', 'Global'],
         year: '2025'
     },
     {
-        title: '주요 대기업 통근 셔틀',
-        desc: 'S그룹, H그룹 등 국내 주요 대기업 임직원 출퇴근 셔틀 운영',
-        tags: ['Corporate', 'Shuttle'],
-        year: 'Ongoing'
-    },
-    {
-        title: 'K-Culture 페스티벌',
-        desc: '대규모 관람객 이동 편의를 위한 셔틀버스 및 주차 관제 시스템',
-        tags: ['Festival', 'Platform'],
-        year: '2024'
-    },
-    {
-        title: 'ADB 연차총회 의전',
-        desc: '68개국 재무장관 및 중앙은행 총재 대상 VIP 의전 수송',
-        tags: ['Intl Event', 'VVIP'],
+        title: 'ADB 연차총회',
+        desc: '68개국 재무장관 및 중앙은행 총재 의전, 2023 인천',
+        tags: ['Intl Event', 'Protocol'],
         year: '2023'
+    },
+    {
+        title: '한-아세안 특별 정상회의',
+        desc: '차량 150대 의전/수송/물류 총괄, 2019 부산',
+        tags: ['Summit', 'Logistics'],
+        year: '2019'
     },
     {
         title: 'Louis Vuitton Pre-Fall',
-        desc: '글로벌 럭셔리 브랜드 패션쇼 VIP 게스트 수송 총괄',
-        tags: ['Luxury', 'Private'],
+        desc: '글로벌 럭셔리 브랜드 패션쇼 VIP 게스트 수송, 서울',
+        tags: ['Luxury', 'VIP'],
         year: '2023'
+    },
+    {
+        title: 'Dior Fall 2022',
+        desc: '글로벌 게스트 의전 및 수송, 서울',
+        tags: ['Luxury', 'Fashion'],
+        year: '2022'
+    },
+    {
+        title: '2025 SBS 가요대전 Summer',
+        desc: '대규모 외국인 관람객 셔틀 운영',
+        tags: ['Entertainment', 'Shuttle'],
+        year: '2025'
     }
 ];
 

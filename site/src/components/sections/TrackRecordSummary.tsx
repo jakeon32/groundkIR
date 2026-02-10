@@ -6,12 +6,27 @@ const metrics = [
     { label: '글로벌 클라이언트', value: '160+개' },
     { label: '누적 프로젝트', value: '130+건' },
     { label: '럭셔리 브랜드 행사', value: '10+건' },
+    { label: '2023 매출', value: '51억원' },
     { label: '무사고 운영', value: '9년' }
 ];
 
-const partners = [
-    'Government', 'Public Inst.', 'Global Corp.', 'Hotel & Resort',
-    'Travel Agency', 'MICE Org.', 'Entertainment', 'IT Platform'
+const partnerCategories = [
+    {
+        category: 'Government & Public',
+        items: ['APEC', 'ADB', 'Foreign Ministry', 'MCST', 'Busan City', 'BOK', 'Seoul Tourism']
+    },
+    {
+        category: 'Luxury & Fashion',
+        items: ['Louis Vuitton', 'Dior', 'CHANEL', 'BURBERRY', 'Moncler']
+    },
+    {
+        category: 'Entertainment',
+        items: ['SM C&C', 'NCT', 'GQ', 'AFC']
+    },
+    {
+        category: 'Corporate & Tourism',
+        items: ['Hyundai Motor', 'Everland', 'Lotte Card', 'Knoll Universe', 'Visa']
+    }
 ];
 
 const TrackRecordSummary: React.FC = () => {
@@ -35,12 +50,19 @@ const TrackRecordSummary: React.FC = () => {
                 {/* Partner Logo Wall */}
                 <div>
                     <h2 className="text-3xl font-bold font-display text-black mb-12 text-center">Trusted Partners</h2>
-                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                        {partners.map((partner, index) => (
-                            <div key={index} className="aspect-[3/2] border border-black flex items-center justify-center bg-gray-50 hover:bg-white transition-colors">
-                                <span className="font-bold text-gray-400 text-lg text-center px-4">
-                                    {partner}<br />LOGO
-                                </span>
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        {partnerCategories.map((group, index) => (
+                            <div key={index} className="border border-black p-6">
+                                <h3 className="text-lg font-bold font-display text-black mb-4 border-b border-gray-200 pb-2">
+                                    {group.category}
+                                </h3>
+                                <ul className="space-y-2">
+                                    {group.items.map((item, i) => (
+                                        <li key={i} className="text-gray-600 font-mono text-sm">
+                                            {item}
+                                        </li>
+                                    ))}
+                                </ul>
                             </div>
                         ))}
                     </div>
