@@ -24,7 +24,7 @@ const ScrollToTop = () => {
 function App() {
   return (
     <HelmetProvider>
-      <Router>
+      <Router basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
         <div className="min-h-screen flex flex-col font-sans text-black bg-white">
           <Navbar />
