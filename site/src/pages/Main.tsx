@@ -1,12 +1,29 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
+import { useLocation } from 'react-router-dom';
+import { ArrowRight } from 'lucide-react';
 import MainHero from '../components/sections/MainHero';
 import MainKPI from '../components/sections/MainKPI';
 import MainBusiness from '../components/sections/MainBusiness';
-import { ArrowRight } from 'lucide-react';
 
 const Main: React.FC = () => {
+    const { hash } = useLocation();
+
+    useEffect(() => {
+        if (hash) {
+            const element = document.getElementById(hash.replace('#', ''));
+            if (element) {
+                element.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    }, [hash]);
+
     return (
-        <div className="w-full bg-white">
+        <div className="w-full">
+            <Helmet>
+                <title>GroundK - Global Mobility Partner</title>
+                <meta name="description" content="그라운드케이는 기업 의전, MICE 수송, 셔틀 운영 등 운수 산업의 디지털 전환을 선도하는 B2B 모빌리티 플랫폼 기업입니다." />
+            </Helmet>
             <MainHero />
             <MainKPI />
             <MainBusiness />

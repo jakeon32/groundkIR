@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { useLocation } from 'react-router-dom';
 import BusinessStructure from '../components/sections/BusinessStructure';
 import BusinessDetails from '../components/sections/BusinessDetails';
@@ -23,6 +24,10 @@ const Business: React.FC = () => {
 
     return (
         <div className="w-full bg-white pt-20">
+            <Helmet>
+                <title>Business Portfolio - GroundK</title>
+                <meta name="description" content="그라운드케이의 비즈니스 포트폴리오: VIP 의전(서비스), 모빌리티 SaaS(솔루션), 셔틀 중개 플랫폼(RIDEUS)." />
+            </Helmet>
             {/* Page Header */}
             <div className="max-w-7xl mx-auto px-6 py-12 border-b border-black text-center">
                 <h1 className="text-4xl md:text-5xl font-bold font-display text-black mb-4">
