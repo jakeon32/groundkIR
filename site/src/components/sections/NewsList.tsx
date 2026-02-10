@@ -4,45 +4,115 @@ import { ArrowUpRight } from 'lucide-react';
 const newsData = [
     {
         id: 1,
-        category: 'T-RiseUp',
-        title: '산업단지 통근버스의 혁신, 부산 산단타요가 선택한 그라운드케이',
-        date: '2026.02.05',
-        source: '이데일리'
+        category: 'Press Release',
+        title: '서울-스키장 직행...그라운드케이의 셔틀 네트워크',
+        date: '2026.02.02',
+        source: 'Press'
     },
     {
         id: 2,
-        category: 'Protocol/Transport',
-        title: '그라운드케이, 2026 APEC 정상회의 공식 의전 파트너 선정',
-        date: '2026.01.15',
-        source: '이데일리'
+        category: 'RIDEUS',
+        title: '그라운드케이, 자체 기술로 공공 셔틀의 허들 낮춘다',
+        date: '2026.01.16',
+        source: 'Press'
     },
     {
         id: 3,
-        category: 'T-RiseUp',
-        title: '운수업 디지털 전환 솔루션 "T-RiseUp", 도입 기업 100곳 돌파',
-        date: '2025.12.10',
-        source: '전자신문'
+        category: 'Press Release',
+        title: '\'썸버지\' 김성복 그라운드케이 CSO',
+        date: '2026.01.14',
+        source: 'Press'
     },
     {
         id: 4,
-        category: 'Company News',
-        title: '[CEO 칼럼] 모빌리티의 미래는 소유가 아닌 경험에 있다',
-        date: '2025.11.05',
-        source: '블로터'
+        category: 'Press Release',
+        title: '그라운드케이, APEC 2025 SOM1의 성공 기여',
+        date: '2025.04.02',
+        source: 'Press'
     },
     {
         id: 5,
         category: 'Press Release',
-        title: '그라운드케이, 시리즈 B 투자 유치 성공... 글로벌 확장 본격화',
-        date: '2025.10.20',
-        source: '벤처스퀘어'
+        title: '그라운드케이, 짐캐리와 관광산업 활성화 MOU',
+        date: '2025.02.20',
+        source: 'Press'
     },
     {
         id: 6,
-        category: 'RIDEUS',
-        title: '부산국제영화제 공식 셔틀 운영사 선정',
-        date: '2025.09.15',
-        source: '부산일보'
+        category: 'Press Release',
+        title: '그라운드케이의 독보적인 \'K-모빌리티 서비스\' 큰 반향... 올해 국내외 큰 성과',
+        date: '2025.02.20',
+        source: 'Press'
+    },
+    {
+        id: 7,
+        category: 'Press Release',
+        title: '그라운드케이 "한국 MICE의 국제적 위상 높이겠다"',
+        date: '2025.02.20',
+        source: 'Press'
+    },
+    {
+        id: 8,
+        category: 'Press Release',
+        title: '그라운드케이, 글로벌 성장 전략 발표',
+        date: '2025.02.20',
+        source: 'Press'
+    },
+    {
+        id: 9,
+        category: 'Press Release',
+        title: '그라운드케이 "지역 관광교통의 디지털 전환 선도"',
+        date: '2025.02.20',
+        source: 'Press'
+    },
+    {
+        id: 10,
+        category: 'Press Release',
+        title: '"태국에서 성장 모멘텀 찾았다" 그라운드케이, 글로벌 본격 진출',
+        date: '2025.02.20',
+        source: 'Press'
+    },
+    {
+        id: 11,
+        category: 'Press Release',
+        title: '그라운드케이, \'검암역 로열파크씨티\' 입주민 셔틀 서비스의 성공적 론칭',
+        date: '2025.02.20',
+        source: 'Press'
+    },
+    {
+        id: 12,
+        category: 'Press Release',
+        title: '그라운드케이, 인터컴과 K-MICE 성장을 위한 MOU 체결',
+        date: '2025.02.20',
+        source: 'Press'
+    },
+    {
+        id: 13,
+        category: 'Press Release',
+        title: '인터컴-그라운드케이, MOU 체결... K-MICE의 미래 그린다',
+        date: '2025.02.20',
+        source: 'Press'
+    },
+    {
+        id: 14,
+        category: 'Press Release',
+        title: '그라운드케이 \'부산형 히든챔피언\'과 \'부산관광 스타기업\' 선정 쾌거',
+        date: '2025.02.19',
+        source: 'Press'
+    },
+    {
+        id: 15,
+        category: 'Press Release',
+        title: '그라운드케이, 작년 매출액 206% 상승한 30억원... 당기순이익도 흑자 전환',
+        date: '2025.02.19',
+        source: 'Press'
+    },
+    {
+        id: 16,
+        category: 'Press Release',
+        title: '그라운드케이, 부산으로 본사 이전... "글로벌 경쟁력 높인다"',
+        date: '2025.02.19',
+        source: 'Press'
     }
 ];
 
