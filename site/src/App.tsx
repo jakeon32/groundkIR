@@ -1,14 +1,25 @@
 import { useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import Navbar from './components/layout/Navbar';
-import Footer from './components/layout/Footer';
-import Main from './pages/Main';
-import About from './pages/About';
-import Business from './pages/Business';
-import TrackRecord from './pages/TrackRecord';
-import News from './pages/News';
-import Contact from './pages/Contact';
+import MainLayout from './components/layout/MainLayout';
+import IRLayout from './components/layout/IRLayout';
+
+// Main site pages
+import Home from './pages/main/Home';
+import Solutions from './pages/main/Solutions';
+import Performance from './pages/main/Performance';
+import Company from './pages/main/Company';
+import Resources from './pages/main/Resources';
+import Contact from './pages/main/Contact';
+
+// IR pages
+import IRHome from './pages/ir/IRHome';
+import InvestmentHighlights from './pages/ir/InvestmentHighlights';
+import Financials from './pages/ir/Financials';
+import IRTrackRecord from './pages/ir/IRTrackRecord';
+import IRNews from './pages/ir/IRNews';
+import Library from './pages/ir/Library';
+import Calendar from './pages/ir/Calendar';
 
 // ScrollToTop component to handle scroll restoration on route change
 const ScrollToTop = () => {
@@ -26,20 +37,28 @@ function App() {
     <HelmetProvider>
       <Router basename={import.meta.env.BASE_URL}>
         <ScrollToTop />
-        <div className="min-h-screen flex flex-col font-sans text-black bg-white">
-          <Navbar />
-          <main className="flex-grow pt-16">
-            <Routes>
-              <Route path="/" element={<Main />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/business" element={<Business />} />
-              <Route path="/track-record" element={<TrackRecord />} />
-              <Route path="/news" element={<News />} />
-              <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+        <Routes>
+          {/* Main Site - Brand/Service focused */}
+          <Route element={<MainLayout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/performance" element={<Performance />} />
+            <Route path="/company" element={<Company />} />
+            <Route path="/resources" element={<Resources />} />
+            <Route path="/contact" element={<Contact />} />
+          </Route>
+
+          {/* IR Section - Investor focused */}
+          <Route path="/ir" element={<IRLayout />}>
+            <Route index element={<IRHome />} />
+            <Route path="investment-highlights" element={<InvestmentHighlights />} />
+            <Route path="financials" element={<Financials />} />
+            <Route path="track-record" element={<IRTrackRecord />} />
+            <Route path="news" element={<IRNews />} />
+            <Route path="library" element={<Library />} />
+            <Route path="calendar" element={<Calendar />} />
+          </Route>
+        </Routes>
       </Router>
     </HelmetProvider>
   );

@@ -1,24 +1,20 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import TrackRecordProjects from '../components/sections/TrackRecordProjects';
-import TrackRecordSummary from '../components/sections/TrackRecordSummary';
-import TrackRecordList from '../components/sections/TrackRecordList';
+import TrackRecordProjects from '../../components/sections/TrackRecordProjects';
+import TrackRecordSummary from '../../components/sections/TrackRecordSummary';
+import TrackRecordList from '../../components/sections/TrackRecordList';
 
-const TrackRecord: React.FC = () => {
-    useEffect(() => {
-        window.scrollTo(0, 0);
-    }, []);
-
+const Performance: React.FC = () => {
     return (
-        <div className="w-full bg-white pt-20">
+        <div className="w-full bg-white">
             <Helmet>
-                <title>Track Record - GroundK</title>
+                <title>Performance & Case Studies - GroundK</title>
                 <meta name="description" content="그라운드케이의 주요 프로젝트 수행 실적 및 글로벌 파트너십 현황을 소개합니다." />
             </Helmet>
             {/* Page Header */}
             <div className="max-w-7xl mx-auto px-6 py-12 border-b border-black text-center">
                 <h1 className="text-4xl md:text-5xl font-bold font-display text-black mb-4">
-                    Track Record
+                    Performance &amp; Case Studies
                 </h1>
                 <p className="text-lg text-gray-600 font-mono">
                     Proven Excellence in Global Mobility
@@ -32,4 +28,4 @@ const TrackRecord: React.FC = () => {
     );
 };
 
-export default TrackRecord;
+export default Performance;
