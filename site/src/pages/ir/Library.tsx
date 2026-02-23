@@ -1,15 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { FileText, File, Folder } from 'lucide-react';
+import { File, Folder } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const documents = [
-    {
-        category: 'IR Deck',
-        items: [
-            { title: '그라운드케이 IR Deck 2025', desc: '회사소개·시장분석·사업모델·팀·재무·로드맵', version: 'v2.0', date: '2025.06', icon: FileText },
-        ],
-    },
     {
         category: 'Company One-pager / Fact Sheet',
         items: [

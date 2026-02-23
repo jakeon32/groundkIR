@@ -3,7 +3,6 @@ import { FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const materials = [
-    { title: 'IR Deck 2025', desc: '회사소개·시장분석·사업모델·팀·재무·로드맵', type: 'PDF', icon: FileText },
     { title: 'Company One-pager', desc: '1페이지 핵심 요약 자료', type: 'PDF', icon: FileText },
 ];
 
