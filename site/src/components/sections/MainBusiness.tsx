@@ -1,5 +1,6 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const businesses = [
     {
@@ -37,9 +38,9 @@ const MainBusiness: React.FC = () => {
                         <p className="text-3xl font-bold font-display text-black">Business Portfolio</p>
                         <p className="text-gray-600 mt-2">서비스 운영으로 현금흐름 확보, SaaS·플랫폼으로 반복매출 구축</p>
                     </div>
-                    <a href="/solutions" className="text-black font-bold flex items-center hover:underline mt-4 md:mt-0">
-                        투자 포인트 자세히 보기 <ArrowRight size={16} className="ml-1" />
-                    </a>
+                    <Link to="/ir/investment-highlights" className="text-black font-bold flex items-center hover:underline mt-4 md:mt-0">
+                        투자포인트 자세히 보기 <ArrowRight size={16} className="ml-1" />
+                    </Link>
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -64,9 +65,9 @@ const MainBusiness: React.FC = () => {
                                 {biz.revenueType}
                             </p>
 
-                            <a href={biz.link} className="inline-flex items-center text-black font-bold text-sm border border-black px-4 py-2 self-start hover:bg-black hover:text-white transition-colors">
+                            <Link to={biz.link} className="inline-flex items-center text-black font-bold text-sm border border-black px-4 py-2 self-start hover:bg-black hover:text-white transition-colors">
                                 <span>DETAILS</span>
-                            </a>
+                            </Link>
                         </div>
                     ))}
                 </div>
