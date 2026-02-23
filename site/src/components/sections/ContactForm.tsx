@@ -1,37 +1,20 @@
 import React from 'react';
-import { Download, MapPin, Mail, Phone } from 'lucide-react';
+import { MapPin, Mail, Phone } from 'lucide-react';
 
 const ContactForm: React.FC = () => {
     return (
         <section className="py-20">
             <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16">
 
-                {/* Left: Contact Info & IR Deck */}
+                {/* Left: Contact Info */}
                 <div>
                     <h2 className="text-3xl font-bold font-display text-black mb-8">Get in Touch</h2>
                     <p className="text-lg text-gray-700 mb-12">
                         그라운드케이의 성장에 관심이 있으신가요?<br />
-                        IR 담당자에게 직접 문의하거나 회사소개서를 확인해보세요.
+                        궁금하신 점이나 IR 자료 요청은 문의하기 양식 또는 연락처를 통해 언제든 문의해 주세요.
                     </p>
 
-                    <div className="mb-12">
-                        <div className="flex flex-col gap-3 mb-4">
-                            <input
-                                type="email"
-                                placeholder="Email required for download"
-                                className="w-full md:w-auto border border-black p-3 bg-white focus:outline-none focus:ring-1 focus:ring-black text-sm"
-                            />
-                            <button className="w-full md:w-auto bg-black text-white px-8 py-4 font-bold flex items-center justify-center gap-3 hover:bg-gray-800 transition-colors">
-                                <Download size={20} />
-                                <span>IR Deck 다운로드 (PDF)</span>
-                            </button>
-                        </div>
-                        <p className="text-xs text-gray-500 font-mono">
-                            * 입력하신 이메일로 PDF가 발송됩니다 (Demo)
-                        </p>
-                    </div>
-
-                    <div className="space-y-6 border-t border-black pt-8">
+                    <div className="space-y-6 pt-4">
                         <div className="flex items-start gap-4">
                             <MapPin className="mt-1" />
                             <div>

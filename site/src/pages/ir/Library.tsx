@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
-import { Download, FileText, File, Folder } from 'lucide-react';
+import { FileText, File, Folder } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const documents = [
     {
@@ -36,7 +37,7 @@ const Library: React.FC = () => {
         <div className="w-full bg-white">
             <Helmet>
                 <title>IR Library - GroundK IR</title>
-                <meta name="description" content="그라운드케이 IR Deck, One-pager, 솔루션 브로슈어 등 투자자용 자료를 다운로드하세요." />
+                <meta name="description" content="그라운드케이 IR Deck, One-pager, 솔루션 브로슈어 등 투자자용 자료를 확인하세요." />
             </Helmet>
 
             {/* Page Header */}
@@ -45,7 +46,7 @@ const Library: React.FC = () => {
                     IR Library
                 </h1>
                 <p className="text-lg text-gray-600 font-mono">
-                    Downloadable IR Materials
+                    Available IR Materials
                 </p>
             </div>
 
@@ -59,7 +60,7 @@ const Library: React.FC = () => {
                             </h2>
                             <div className="space-y-4">
                                 {group.items.map((item, ii) => (
-                                    <div key={ii} className="border border-black p-6 flex items-start justify-between hover:bg-gray-50 transition-colors">
+                                    <div key={ii} className="border border-black p-6 flex flex-col md:flex-row items-start md:items-center justify-between hover:bg-gray-50 transition-colors gap-6 md:gap-0">
                                         <div className="flex items-start space-x-4">
                                             <div className="w-10 h-10 border border-black bg-gray-100 flex items-center justify-center shrink-0">
                                                 <item.icon size={18} />
@@ -76,9 +77,9 @@ const Library: React.FC = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <button className="shrink-0 border border-black p-2 hover:bg-black hover:text-white transition-colors">
-                                            <Download size={16} />
-                                        </button>
+                                        <Link to="/contact" className="shrink-0 border border-black px-6 py-3 font-bold text-sm bg-white hover:bg-black hover:text-white transition-colors w-full md:w-auto text-center">
+                                            자료 요청하기
+                                        </Link>
                                     </div>
                                 ))}
                             </div>
@@ -90,10 +91,13 @@ const Library: React.FC = () => {
             {/* Contact for Materials */}
             <section className="py-16 bg-gray-50 border-t border-black text-center">
                 <div className="max-w-3xl mx-auto px-6">
-                    <p className="text-sm text-gray-500 font-mono mb-2">
-                        추가 자료가 필요하시면 IR 담당에게 문의해 주세요.
+                    <p className="text-sm text-gray-500 font-mono mb-6">
+                        추가 자료가 필요하시거나 바로 미팅을 원하시면 담당자에게 문의해 주세요.
                     </p>
-                    <p className="text-lg font-bold text-black">
+                    <Link to="/contact" className="inline-block bg-black text-white px-8 py-3 font-bold hover:bg-gray-800 transition-colors">
+                        IR 문의 바로가기
+                    </Link>
+                    <p className="mt-6 text-sm font-bold text-black">
                         ir@groundk.co.kr | 02-863-3540
                     </p>
                 </div>

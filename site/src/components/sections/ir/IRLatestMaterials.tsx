@@ -1,5 +1,5 @@
 import React from 'react';
-import { Download, FileText } from 'lucide-react';
+import { FileText } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const materials = [
@@ -16,7 +16,7 @@ const IRLatestMaterials: React.FC = () => {
                         <h2 className="text-sm font-bold font-mono text-gray-500 uppercase tracking-wider mb-2">
                             Latest IR Materials
                         </h2>
-                        <p className="text-2xl font-bold font-display text-black">IR 자료 다운로드</p>
+                        <p className="text-2xl font-bold font-display text-black">IR 자료 안내</p>
                     </div>
                     <Link to="/ir/library" className="text-sm font-bold text-black hover:underline">
                         전체 자료실 →
@@ -25,8 +25,8 @@ const IRLatestMaterials: React.FC = () => {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {materials.map((item, index) => (
-                        <div key={index} className="border border-black p-6 flex items-start justify-between hover:bg-gray-50 transition-colors">
-                            <div className="flex items-start space-x-4">
+                        <div key={index} className="border border-black p-6 flex flex-col justify-between hover:bg-gray-50 transition-colors">
+                            <div className="flex items-start space-x-4 mb-4">
                                 <div className="w-10 h-10 border border-black bg-gray-100 flex items-center justify-center shrink-0">
                                     <item.icon size={18} />
                                 </div>
@@ -36,9 +36,10 @@ const IRLatestMaterials: React.FC = () => {
                                     <span className="text-xs font-mono text-gray-400 mt-1 block">{item.type}</span>
                                 </div>
                             </div>
-                            <button className="shrink-0 border border-black p-2 hover:bg-black hover:text-white transition-colors">
-                                <Download size={16} />
-                            </button>
+                            <Link to="/contact" className="text-sm font-bold text-black border-t border-black pt-4 w-full flex items-center justify-between hover:underline">
+                                자료 요청하기
+                                <span className="font-mono">→</span>
+                            </Link>
                         </div>
                     ))}
                 </div>

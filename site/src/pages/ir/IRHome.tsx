@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import MainInvestmentHighlights from '../../components/sections/MainInvestmentHighlights';
 import MainKPI from '../../components/sections/MainKPI';
 import IRLatestMaterials from '../../components/sections/ir/IRLatestMaterials';
@@ -34,12 +34,8 @@ const IRHome: React.FC = () => {
                             운수산업의 디지털 전환을 이끄는 B2B 모빌리티 플랫폼 기업
                         </p>
 
-                        <div className="flex flex-wrap gap-4">
-                            <Link to="/ir/library" className="flex items-center space-x-2 bg-black text-white px-8 py-3 font-bold border border-black hover:bg-white hover:text-black transition-colors">
-                                <Download size={18} />
-                                <span>IR Deck 다운로드</span>
-                            </Link>
-                            <Link to="/ir/calendar" className="flex items-center space-x-2 border border-black text-black px-8 py-3 font-bold hover:bg-gray-100 transition-colors">
+                        <div className="flex flex-wrap gap-4 items-center">
+                            <Link to="/contact" className="flex items-center space-x-2 bg-black text-white px-8 py-3 font-bold border border-black hover:bg-white hover:text-black transition-colors">
                                 <span>IR 미팅 문의</span>
                                 <ArrowRight size={18} />
                             </Link>
@@ -73,15 +69,12 @@ const IRHome: React.FC = () => {
                         GroundK의 재무현황, 트랙레코드, 향후 성장전략에 대해 더 알고 싶으시다면
                     </p>
                     <p className="text-gray-600 mb-10 text-lg">
-                        IR 자료를 확인하시거나, 직접 미팅을 요청해 주세요.
+                        자료를 요청하시거나, 직접 미팅을 문의해 주세요.
                     </p>
                     <div className="flex flex-col sm:flex-row justify-center gap-4">
-                        <Link to="/ir/library" className="bg-black text-white px-8 py-3 font-bold border border-black hover:bg-white hover:text-black transition-colors">
-                            IR Deck 다운로드
-                        </Link>
-                        <Link to="/ir/calendar" className="bg-white text-black px-8 py-3 font-bold border border-black hover:bg-gray-100 transition-colors inline-flex items-center justify-center">
-                            <span>IR 미팅 문의</span>
-                            <ArrowRight size={18} className="ml-2" />
+                        <Link to="/contact" className="bg-black text-white px-10 py-4 font-bold border border-black hover:bg-gray-800 transition-colors inline-flex items-center justify-center text-lg">
+                            <span>IR 미팅 및 자료 요청</span>
+                            <ArrowRight size={20} className="ml-2" />
                         </Link>
                     </div>
                     <p className="mt-6 text-sm text-gray-500 font-mono">
