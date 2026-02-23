@@ -26,7 +26,7 @@ const IRLatestMaterials: React.FC = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     {materials.map((item, index) => (
                         <div key={index} className="border border-black p-6 flex flex-col justify-between hover:bg-gray-50 transition-colors">
-                            <div className="flex items-start space-x-4 mb-4">
+                            <div className="flex items-start space-x-4">
                                 <div className="w-10 h-10 border border-black bg-gray-100 flex items-center justify-center shrink-0">
                                     <item.icon size={18} />
                                 </div>
@@ -36,10 +36,6 @@ const IRLatestMaterials: React.FC = () => {
                                     <span className="text-xs font-mono text-gray-400 mt-1 block">{item.type}</span>
                                 </div>
                             </div>
-                            <Link to="/contact" className="text-sm font-bold text-black border-t border-black pt-4 w-full flex items-center justify-between hover:underline">
-                                자료 요청하기
-                                <span className="font-mono">→</span>
-                            </Link>
                         </div>
                     ))}
                 </div>

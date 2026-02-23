@@ -77,9 +77,6 @@ const Library: React.FC = () => {
                                                 </div>
                                             </div>
                                         </div>
-                                        <Link to="/contact" className="shrink-0 border border-black px-6 py-3 font-bold text-sm bg-white hover:bg-black hover:text-white transition-colors w-full md:w-auto text-center">
-                                            자료 요청하기
-                                        </Link>
                                     </div>
                                 ))}
                             </div>
